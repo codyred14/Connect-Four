@@ -1,0 +1,78 @@
+body {
+  text-align: center;
+  background-color: rgb(0, 255, 229);
+}
+
+h1 {
+  position: relative;
+  top: 125px;
+  font-family: "Rowdies", cursive;
+  font-size: 100px;
+  background: radial-gradient(rgb(199, 47, 233), rgb(97, 255, 18));
+  box-shadow: 2px 2px 4px black;
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#board {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+.piece {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+}
+
+.piece.p1 {
+  background-color: rgb(199, 47, 223);
+}
+
+.piece.p2 {
+  background-color: rgb(97, 255, 18);
+}
+
+#column-top td {
+  border: dashed 2px rgb(0, 0, 0);
+}
+
+#column-top td.p1:hover {
+  background-color: rgb(199, 47, 223);
+}
+
+#column-top td.p2:hover {
+  background-color: rgb(97, 255, 18);
+}
+
+.drop-animation {
+  animation: drop 0.3s ease-out;
+}
+
+@keyframes drop {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0;
+  }
+}
